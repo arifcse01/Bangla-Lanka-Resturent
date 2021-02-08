@@ -1,7 +1,10 @@
+body{
+    background: rgb(204, 218, 155);
+}
 #search-button{
     padding: 10px;
-    background-color: #ff4800;
-    border: 1px solid #ffa600ec;
+    background-color: tomato;
+    border: 1px solid #e77e6c;
     border-radius: 5px;
     color: #fff;
 }
@@ -13,7 +16,7 @@
     border-radius: 5px;
 }
 h1{
-
+    color: #525831;
 }
 #meals{
     margin-top: 40px;

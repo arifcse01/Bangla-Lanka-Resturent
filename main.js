@@ -1,14 +1,16 @@
 const displayButton = document.getElementById("search-button");
 displayButton.addEventListener("click", function(){
     const inputMeal = document.getElementById("search-item").value;
+    if(inputMeal === ""){
+        return alert("Search box is Empty.");
+    }
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${inputMeal}`)
     . then(response => response.json())
     .then(data => displayMeal(data.meals))
     
     .catch((error)=>{
-        window.alert("Invalid Meal");
-    })
-        
+        window.alert("Sorry Meals are not found at this time.");
+    })        
 })
 
 const displayMeal = mealName =>{    
@@ -22,8 +24,7 @@ const displayMeal = mealName =>{
         `;
         newDiv.innerHTML = mealInfo;
         searchMeal.appendChild(newDiv);
-    })
-    
+    })    
 }
 
 const detailsMeal = (mealTitle) =>{
@@ -31,11 +32,9 @@ const detailsMeal = (mealTitle) =>{
     fetch(url)
     .then(response => response.json())
     .then(data => ingredientList(data.meals[0]));
-
 }
 
 const ingredientList = mealDetails =>{
-    console.log(mealDetails)
     const mealList = document.getElementById("meal-details");
     mealList.innerHTML =`
         <img src="${mealDetails.strMealThumb}">
