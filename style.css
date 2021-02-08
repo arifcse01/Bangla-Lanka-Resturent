@@ -1,0 +1,40 @@
+#search-button{
+    padding: 10px;
+    background-color: #ff4800;
+    border: 1px solid #ffa600ec;
+    border-radius: 5px;
+    color: #fff;
+}
+#search-item{
+    padding: 10px;
+    width: 400px;
+    background-color: #f3ebeb;
+    border: none;
+    border-radius: 5px;
+}
+h1{
+
+}
+#meals{
+    margin-top: 40px;
+    margin-left: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+}
+#meals img, #meal-details img{
+    width: 300px;
+    border-radius: 10px;
+    background: #ddd9d9;
+    margin-top: 10px;
+}
+.meal-name{
+    text-align: center;
+}
+#meal-details{
+   margin: 20px 450px;
+}
+.title{
+    margin-top: 10px;
+}
+
